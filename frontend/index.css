@@ -1,12 +1,62 @@
+/* Heading */
 h1 {
     color: red;
 }
 
-/* property : value */
-
+/* Home Intro */
 #home-intro {
     text-align: center;
-
-    /* border shorthand */
     border: 3px solid black;
+}
+
+#home-intro:hover {
+    background-color: burlywood;
+}
+
+#p2 {
+    color: blue;
+}
+
+/* Navigation */
+#nav {
+    text-align: center;
+    background-color: brown;
+    height: 25px;
+    padding-top: 5px;
+}
+
+#nav a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Card */
+#card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#card-img {
+    width: 300px;
+    height: 300px;
+}
+
+#card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#card-name {
+    margin: 15px 0 5px;
+    color: black;
+}
+
+#card-gender {
+    margin: 0;
+    font-size: 18px;
+    color: gray;
 }

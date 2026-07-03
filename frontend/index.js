@@ -1,2 +1,2 @@
 console.log("Hello from JS");
-alert("Hello from JavaScript!");
+/*alert("Hello from JavaScript!");*/
