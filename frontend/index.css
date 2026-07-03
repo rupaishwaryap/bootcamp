@@ -1,3 +1,12 @@
-h1{
-    color: red
+h1 {
+    color: red;
+}
+
+/* property : value */
+
+#home-intro {
+    text-align: center;
+
+    /* border shorthand */
+    border: 3px solid black;
 }
