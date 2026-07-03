@@ -1,0 +1,24 @@
+{
+  "name": "bootcamp",
+  "version": "1.0.0",
+  "description": "git config --global user.name \"rupaishwaryap\"\r git config --global user.email \"24wh1a05g8@bvrithyderabad.edu.in\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rupaishwaryap/bootcamp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rupaishwaryap/bootcamp/issues"
+  },
+  "homepage": "https://github.com/rupaishwaryap/bootcamp#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
