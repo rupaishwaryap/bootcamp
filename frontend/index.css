@@ -1,9 +1,8 @@
-/* Heading */
+
 h1 {
     color: red;
 }
 
-/* Home Intro */
 #home-intro {
     text-align: center;
     border: 3px solid black;
@@ -17,7 +16,6 @@ h1 {
     color: blue;
 }
 
-/* Navigation */
 #nav {
     text-align: center;
     background-color: brown;
@@ -31,7 +29,7 @@ h1 {
     color: white;
 }
 
-/* Card */
+/* User Card */
 #card {
     display: flex;
     flex-direction: column;
@@ -59,4 +57,19 @@ h1 {
     margin: 0;
     font-size: 18px;
     color: gray;
+}
+
+#toggle-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(244, 225, 225);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#toggle-btn:hover {
+    background-color: rgba(253, 245, 245, 0);
 }

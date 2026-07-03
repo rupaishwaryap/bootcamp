@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Card</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -23,11 +23,19 @@
 
     <div id="card">
         <div id="card-img">
-            <img src="./images/jane.png" alt="Jane Doe">
+            <img
+                id="user-img"
+                src="./images/jane.png"
+                alt="Jane Doe"
+            >
         </div>
 
         <h1 id="card-name">Jane Doe</h1>
         <p id="card-gender">Female</p>
+
+        <button id="toggle-btn" onclick="toggle()">
+            Toggle User
+        </button>
     </div>
 
     <script src="index.js"></script>
