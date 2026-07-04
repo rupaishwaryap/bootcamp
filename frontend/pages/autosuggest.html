@@ -3,10 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Suggest Page</title>
-    <p>this is the autosuggest page</p>
+    <title>AutoSuggest</title>
+
+    <style>
+        .left {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+        }
+        .right {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 18px;
+        }
+        .search {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .colortext {
+            color: blue;
+        }
+
+        .tag-line {
+            color: gray;
+        }
+
+        .search-box {
+            width: 40%;
+            margin: 30px auto 0;
+            display: flex;
+            align-items: center;
+            border: 2px solid #191cdb;
+            border-radius: 30px;
+            padding: 12px 18px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 16px;
+            background: transparent;
+        }
+   .suggestion-box {
+    width: 40%;
+    margin: 5px auto;
+    border: 1px solid
+}
+    </style>
 </head>
 <body>
-    
+
+    <span class="left">&#9881;</span>
+    <span class="right">&#8226; online | &#128336; - ms</span>
+
+    <div class="search">
+        <h1><span class="colortext">Being</span>Infinity</h1>
+
+        <p class="tag-line">
+            One million phrases. Four algorithms. Prefix Based Auto Suggest.
+        </p>
+
+        <div class="search-box">
+            <span>&#128269;</span>
+            <input type="text" placeholder="Start typing to search phrases">
+        </div>
+
+        <div class="suggestion-box">
+            Suggestion Box
+        </div>
+    </div>
+
 </body>
 </html>

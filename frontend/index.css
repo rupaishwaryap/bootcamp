@@ -73,3 +73,17 @@ h1 {
 #toggle-btn:hover {
     background-color: rgba(198, 36, 36, 0.859);
 }
+.title {
+    display: flex;
+    align-items: center;    
+    justify-content: space-between; 
+}
+
+.title h1 {
+    margin: 0;
+}
+
+.title span {
+    font-size: 14px;
+    color: green;
+}
