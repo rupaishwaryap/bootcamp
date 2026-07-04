@@ -3,78 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoSuggest</title>
-
+    <title>Document</title>
     <style>
-        .left {
+        .left-bar{
             position: fixed;
             top: 20px;
             left: 20px;
-            font-size: 24px;
         }
-        .right {
+        .right-bar{
             position: fixed;
             top: 20px;
             right: 20px;
-            font-size: 18px;
         }
-        .search {
+        .search-section{
             text-align: center;
             margin-top: 100px;
         }
-        .colortext {
+        .logo-first{
             color: blue;
         }
-
-        .tag-line {
+        .tag-line{
             color: gray;
         }
-
-        .search-box {
+        .lens{ 
+            position: relative;
+             /* left or right or top or bottom  */
+             left: 35px; 
+        }
+        .search-box{
+            padding: 15px 15px 15px 45px; 
+            border-radius: 30px; 
             width: 40%;
-            margin: 30px auto 0;
-            display: flex;
-            align-items: center;
-            border: 2px solid #191cdb;
-            border-radius: 30px;
-            padding: 12px 18px;
         }
-
-        .search-box input {
-            border: none;
-            outline: none;
-            width: 100%;
-            font-size: 16px;
-            background: transparent;
+        #suggestion-box{
+            /* border: 1px solid black; */
+            width : 45%;
+            margin-left: 29%;
         }
-   .suggestion-box {
-    width: 40%;
-    margin: 5px auto;
-    border: 1px solid
-}
+        #suggestion-item{
+            border: 1px solid gray;
+            padding: 10px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
-
-    <span class="left">&#9881;</span>
-    <span class="right">&#8226; online | &#128336; - ms</span>
-
-    <div class="search">
-        <h1><span class="colortext">Being</span>Infinity</h1>
-
-        <p class="tag-line">
-            One million phrases. Four algorithms. Prefix Based Auto Suggest.
-        </p>
-
-        <div class="search-box">
-            <span>&#128269;</span>
-            <input type="text" placeholder="Start typing to search phrases">
-        </div>
-
-        <div class="suggestion-box">
-            Suggestion Box
+    <div>
+        <span class="left-bar" >&#9881;</span>
+        <span class="right-bar" >&#x2022; online | &#x1F552; - ms</span>
+    </div>
+    <div class="search-section">
+        <h1><span class="logo-first">Being</span> Infinity</h1>
+        <p class="tag-line">One million phrases. Four Algorithms. Prefix Based Auto Suggest</p>
+        <span> 
+            <span class="lens">&#128269;</span> 
+            <input class="search-box" id="search-box" placeholder="Start Typing to search">
+        </span>
+        <div id="suggestion-box">
+            <!-- Suggestion Box -->
         </div>
     </div>
 
+    <script>
+        var searchBox = document.getElementById("search-box");
+        var suggestionBox = document.getElementById("suggestion-box");
+
+        searchBox.addEventListener("input", function(){
+            // complete 1, 2 - 5 MINS
+            // 1 : Get user typed text
+            var userInput = searchBox.value;
+            if(userInput.trim() === ""){
+
+            }
+            else{
+                var url1 = "https://autosuggest-backend.onrender.com/api/autosuggest?q=";
+                var url3 = "&algorithm=brute&limit=10&weighted=false";
+                var url = url1 + userInput + url3;
+                // 2 : Make api call to get suggestion 
+                fetch(url).
+                    then(function(response){
+                        return response.json();
+                    })
+                    .then(function(data){
+                        console.log(data);
+
+                        // 3 : Display data in HTML
+                        var resultsArray = data.results;
+                        var htmlResults = "";
+                        for(var i=0; i< resultsArray.length; i++)
+                        {
+                            htmlResults+= "<div id='suggestion-item'>" + resultsArray[i].text + "</div>"
+                        }
+                        // var suggestionBox = document.getElementById("suggestion-box");
+                        suggestionBox.innerHTML = htmlResults;
+                        
+                    })
+
+                
+            }
+
+
+        })
+    </script>
 </body>
 </html>
